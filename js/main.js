@@ -1,7 +1,7 @@
 let searchInput = document.getElementById('searchInput');
 let cityText = document.getElementById('cityText');
 let rowData = document.getElementById('rowData');
-let baseUrlWeather = 'http://api.weatherapi.com/v1/forecast.json?key=bc16b74e4a85499bb6f222657251604&q='
+let baseUrlWeather = 'https://api.weatherapi.com/v1/forecast.json?key=bc16b74e4a85499bb6f222657251604&q='
 let today = new Date();
 let curentHour = today.getHours();
 let monthName = today.toLocaleDateString('en-US', { month: 'long' }); 
