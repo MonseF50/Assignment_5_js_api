@@ -1,0 +1,97 @@
+/*! STart global style */
+:root {
+    --main-color: #009AD8;
+    --card-bg-color:#323544;
+    --card-bg-sec-color:#262936;
+    --font-color:rgb(191, 193, 200);
+}
+* {
+    box-sizing: border-box !important;
+}
+input {
+    outline: none;
+}
+/*! End global style */
+
+/** Start navbar style */
+.myNav .navbar-brand img  {
+    width: 80px;
+}
+.myNav .nav-brnad-logname h1 {
+    font-size: 16px;
+    margin-bottom: 5px !important;
+}
+.myNav .nav-brnad-logname p {
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+.myNav .active{
+    border: 3px solid var(--main-color);
+    color: var(--main-color) !important;
+}
+.myNav .nav-link {
+    padding-block: 0px !important;
+    color: #fff !important;
+}
+.myNav .nav-link:hover:not(.active) {
+    outline: 3px solid var(--main-color) ;
+    color: var(--main-color) !important;
+}
+
+/** End navbar style */
+/*^ Start section weather style */
+.section-weather {
+    background-image: url(../img/background.png) , linear-gradient(#262936,#262936);
+    background-repeat:no-repeat ;
+}
+.section-weather .searchInput button,
+footer .footerInput button {
+    right: 5px;
+    top: 5px;
+    padding: 10px 35px;
+}
+.section-weather .weather-data .col .card{
+    color: var(--font-color); ;
+    background-color: var(--card-bg-color);
+}
+.section-weather .weather-data  .col:nth-of-type(2)  .card {
+    background-color: var(--card-bg-sec-color);
+}
+.section-weather .weather-data .card-body >span:first-of-type{
+    font-size: 90px;
+    font-weight: 700;
+    display: inline-flex;
+}
+.section-weather .weather-data .card-body >img {
+    width: 100px;
+    display: inline-flex;
+}
+.section-weather .weather-data .card-body .text {
+    color: var(--main-color);
+}
+#rowData .col  .card{
+    min-height: 450px !important;
+}
+/*^ End section weather style */
+/*! Start Footer weather style */
+footer {
+    background-color: var(--card-bg-color);
+}
+.social-icons .icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--card-bg-sec-color);
+    color: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    margin-left: 3px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.social-icons .icon:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+/*! End Footer weather style */
