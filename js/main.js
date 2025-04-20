@@ -9,7 +9,10 @@ let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 let curentDay = days[today.getDay()];
 let nextDay = days[(today.getDay() + 1) %7];
 let afterNextDay = days[(today.getDay() + 2)% 7] ;
-
+let myFrom = document.querySelector('form');
+myFrom.addEventListener('submit', (e)=>{
+    e.preventDefault();
+})
 if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(position){
         let latitude   =  position.coords.latitude;
@@ -42,7 +45,9 @@ async function getWeather(params) {
 
 function display(parm){
     let currentWeatherCard = `
-                        <div class="col" data-aos="fade-right">
+                        <div class="col" data-aos="fade-right"
+                                         ata-aos-offset="500"
+                                         data-aos-easing="linear">
                         <div class="inner">
                             <div class="card">
                                 <div class="card-header d-flex justify-content-between">
@@ -72,7 +77,9 @@ function display(parm){
                             </div>
                         </div>
                     </div>
-                        <div class="col myCard"  data-aos="zoom-in-up">
+                        <div class="col myCard"     data-aos="zoom-in-up"
+                                                    ata-aos-offset="1200"
+                                                    data-aos-easing="linear">
                         <div class="inner">
                             <div class="card">
                                 <div class="card-header text-center">
@@ -89,7 +96,9 @@ function display(parm){
                             </div>
                         </div>
                     </div>
-                    <div class="col myCard"  data-aos="zoom-in-up">
+                    <div class="col myCard"  data-aos="fade-left"
+                                            ata-aos-offset="2000"
+                                            data-aos-easing="linear">
                         <div class="inner">
                             <div class="card">
                                 <div class="card-header text-center">
